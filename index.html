@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorytm Genetyczny - TSP</title>
+    <meta name="author" content="Radosław Nawrot - 150064">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <!-- Custom Script -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 class="text-center">Algorytm Genetyczny - Problem Komiwojażera</h1>
+        <form>
+            <div class="form-group">
+                <label for="populationSize">Liczebność Populacji:</label>
+                <input type="number" class="form-control" id="populationSize" min="1" value="100">
+            </div>
+            <div class="form-group">
+                <label for="iterations">Liczba Iteracji:</label>
+                <input type="number" class="form-control" id="iterations" min="1" value="500">
+            </div>
+            <div class="form-group">
+                <label for="mutationRate">Prawdopodobieństwo Mutacji:</label>
+                <input type="number" class="form-control" id="mutationRate" step="0.01" min="0" max="1" value="0.01">
+            </div>
+            <button type="button" class="btn btn-primary btn-block" onclick="runAlgorithm()">Uruchom</button>
+        </form>
+        <div id="visualization"></div>
+    </div>
+</body>
+</html>
